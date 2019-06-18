@@ -1,0 +1,23 @@
+@import '../atoms/logo';
+@import './atoms/botao';
+
+header {
+    .navbar-fixed {
+        height: 100px;
+        line-height: 100px;
+        position: absolute;
+        .navbar {
+            height: 100px;
+            line-height: 100px;
+            background-color: transparent;
+            .nav-wrapper {
+                .sidenav-trigger {
+                    @include font-size(40px);
+                }
+            }
+        }
+        .nav-color {
+            background-color: rgba($preto, .50);
+        }
+    }
+}

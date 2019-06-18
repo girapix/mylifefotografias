@@ -1,0 +1,11 @@
+.brand-logo {
+    height: 100px;
+    display: flex !important;
+    align-items: center;
+    img {
+        width: 100px;
+        @include mq('desktop') {
+            width: 150px;
+        }
+    }
+}

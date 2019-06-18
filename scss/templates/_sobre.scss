@@ -1,0 +1,51 @@
+@import '../atoms/botao';
+
+.home-sobre {
+    min-height: 100vh;
+    background: {
+        image: url('../images/institucional/mosaico-sobre.jpg');
+        size: cover;
+        position: bottom center;
+        repeat: no-repeat;
+    }
+    display: flex;
+    align-items: center;
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .sobre-box {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+            justify-content: space-between;
+            padding: 40px 0;
+            .sobre-call,
+            .sobre-desc {
+                margin-left: 0;
+            }
+            .sobre-call {
+                h1 {
+                    @include font-size(40px);
+                    font-weight: $semi;
+                    padding: 30px 0;
+                    @include mq('desktop') {
+                        @include font-size(60px);
+                    }
+                }
+            }
+            .sobre-desc {
+                p {
+                    @include font-size(18px);
+                    padding: 15px 0;
+                    color: $branco;
+                    line-height: 20px;
+                    @include mq('desktop') {
+                        @include font-size(25px);
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

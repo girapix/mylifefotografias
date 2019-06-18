@@ -1,0 +1,63 @@
+@import '../atoms/background';
+@import '../atoms/titulos';
+@import '../atoms/botao';
+
+[class^="home-ensaio-box-"] {
+    height: 100vh;
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: top left;
+    }
+    box-shadow: inset 0 0 0 1000px rgba($azul, .5);
+    .container {
+        height: 100%;
+        position: relative;
+        .home-ensaio-detalhes {
+            position: absolute;
+            left: 0;
+            bottom: 10vh;
+            p {
+                color: $azul-claro;
+                font-size: 1.2rem;
+                width: 70%;
+                padding: 1.5rem 0 1rem !important;
+                @include mq('desktop') {
+                    font-size: 1.5rem !important;
+                    padding: 3rem 0 1rem !important;
+                }
+            }
+        }
+        .home-ensaio-pagina {
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            .pagina-atual {
+                font-size: 3rem;
+                color: $rosa;
+                @include mq('desktop') {
+                    font-size: 7rem !important;
+                }
+            }
+            .pagina-total {
+                font-size: 1.5rem;
+                color: $branco;
+                @include mq('desktop') {
+                    font-size: 2rem !important;
+                }
+            }
+            .pagina-total,
+            .pagina-atual {
+                @include opacity(.2);
+            }
+        }
+        .home-scroll-down {
+            color: $branco;
+            position: absolute;
+            font-size: 2rem;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+        }
+    }
+}

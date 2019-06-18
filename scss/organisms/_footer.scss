@@ -1,0 +1,53 @@
+footer {
+    background-color: $azul;
+    height: 100px;
+
+    .container {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .footer-inicio,
+        .footer-topo {
+            a {
+                display: block;
+                text-align: center;
+                color: $azul-claro;
+                @include font-size(20px);
+                &:hover {
+                    color: $rosa;
+                }
+                .icone {
+                    @include font-size(30px);
+                }
+                .descr {
+                    display: none;
+                    @include mq('desktop') {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .footer-copy {
+            text-align: center;
+        }
+        h1 {
+            color: $azul-claro;
+            @include font-size(20px);
+            padding-bottom: 1vh;
+            @include mq('desktop') {
+                @include font-size(30px);
+            }
+        }
+        p {
+            color: $azul-claro;
+            @include font-size(16px);
+            a {
+                color: #FBBA00;
+                &:hover, &:focus {
+                    color: darken(#FBBA00, 10%);
+                }
+            }
+        }
+    }
+}
